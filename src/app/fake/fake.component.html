@@ -1,1 +1,10 @@
-
+<div class="container-fluid">
+<button 
+    class="btn btn-primary" 
+    (click)="handleClick()">Reload
+</button>
+<div>
+    <h3>list of users</h3>
+    {{users|json}}
+</div>
+</div>
