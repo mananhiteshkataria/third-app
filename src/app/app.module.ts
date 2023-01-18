@@ -6,11 +6,13 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TdfdemoComponent } from './tdfdemo/tdfdemo.component';
+import { MdfdemoComponent } from './mdfdemo/mdfdemo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TdfdemoComponent
+    TdfdemoComponent,
+    MdfdemoComponent
   ],
   imports: [
     BrowserModule,
