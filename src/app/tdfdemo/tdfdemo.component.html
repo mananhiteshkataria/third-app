@@ -4,24 +4,24 @@
     </h3>
         <form #user="ngForm" (ngSubmit)="handleSubmit(user.value)">
             <div class="container-fluid">
-            <div class="container">
+            <div class="form-group">
                 <label>
                     First Name
-                    <input type ="text" name="first" placeholder="firstname"
-                    ngModel>
+                    <input type ="text" class="form-control" name="first" placeholder="firstname"
+                     [(ngModel)]="first" required>
                 </label>
             </div>
-                <div class="container">
+                <div class="form-group">
                     <label>
                         Last Name
-                        <input type="text" name="last" placeholder="lastname"
+                        <input type="text " class="form-control" name="last" placeholder="lastname"
                         ngModel>
                         </label>
                 </div>
-                    <div class="container">
+                    <div class="form-group">
                         <label>
                             Phone No
-                            <input type="text" name="phone" placeholder="phoneno"
+                            <input type="text" class="form-control" name="phone" placeholder="phoneno"
                             ngModel>
                         </label>
                     </div>

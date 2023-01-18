@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./tdfdemo.component.css']
 })
 export class TdfdemoComponent {
-  /*first: string='';
+  first: string='';
   last: string='';
   phone : number | string ='';
-*/
+
   handleSubmit(user: any)
   {
     alert('Form is submitted');
