@@ -42,7 +42,19 @@
       thos.user.reset({}); // clears form in view and component class
 
     Form Validation is done in the code in the case of MDF and in case of TDF its done in view
-}
+
+    user=this.builder.group({first:["",Validators.compose([Validators.required,Validators.minLength(3)])],
+                              last:[],phone:[]});
+
+    Form Control Properties
+
+    These help in understanding form control properties like value,valid,invalid,pristine
+
+    user.control['first'].value>>returns value of the control
+
+    user.controls['first'].valid>> returns true or false
+
+    user.controls['first'].pristine >> 
   -->
   
 </div>

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {FormBuilder} from '@angular/forms'
+import {FormBuilder, Validators} from '@angular/forms'
 @Component({
   selector: 'app-mdfdemo',
   templateUrl: './mdfdemo.component.html',
@@ -8,7 +8,11 @@ import {FormBuilder} from '@angular/forms'
 export class MdfdemoComponent {
  constructor(public builder:FormBuilder){}
 
-  user=this.builder.group({first:[],last:[],phone:[]});
+  user=this.builder.group({
+    first:['',Validators.compose([Validators.required])],
+  last:['',Validators.compose([Validators.required])],
+  phone:['',Validators.compose([Validators.required])]
+});
 
 handleSubmit()
 {
@@ -17,5 +21,6 @@ handleSubmit()
   let firstname=this.user.controls['first'].value;
   console.log('Hey  '+firstname);
   this.user.reset({});
+
 }
 }

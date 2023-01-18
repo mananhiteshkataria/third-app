@@ -8,21 +8,32 @@
                 <label>
                     First Name
                     <input formControlName="first" class="form-control" placeholder="firstname">
+                    <span [hidden]="user.controls['first'].valid || user.controls['first'].pristine"
+                    class="text-danger">Firstname is required</span>
                 </label>
             </div>
                 <div class="container">
                     <label>
                         Last Name
                         <input formControlName="last" class="form-control" placeholder="lastname">
+                        <span [hidden]="user.controls['last'].valid||user.controls['last'].pristine" 
+                        class="text-danger">Last Name is needed</span>
                         </label>
                 </div>
                     <div class="container">
                         <label>
                             Phone No
                             <input formControlName="phone" class="form-control" placeholder="phoneno">
+                            <span [hidden]="user.controls['phone'].valid||user.controls['phone'].pristine" 
+                        class="text-danger">PhoneNo is needed</span>
                         </label>
                     </div>
-                <input type="submit" class="btn btn-primary">
+                <input type="submit" [disabled]="user.invalid" class="btn btn-primary"><br>
+                Form is valid : {{user.valid}} <br>
+                Firstname,Lastname,PhoneNo pristine:
+                {{user.controls['first'].pristine}} {{user.controls['last'].pristine}} {{user.controls['phone'].pristine}}<br>
+                Firstname,Lastname,PhoneNo valid:
+                {{user.controls['first'].valid}} {{user.controls['last'].valid}} {{user.controls['phone'].valid}}<br>
             </div>
         </form>
 </div>
