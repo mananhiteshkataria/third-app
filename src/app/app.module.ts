@@ -6,12 +6,14 @@ import {HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { TdfdemoComponent } from './tdfdemo/tdfdemo.component';
 import { MdfdemoComponent } from './mdfdemo/mdfdemo.component';
+import { FakeComponent } from './fake/fake.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TdfdemoComponent,
-    MdfdemoComponent
+    MdfdemoComponent,
+    FakeComponent
   ],
   imports: [
     BrowserModule,
