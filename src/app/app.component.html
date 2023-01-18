@@ -1,7 +1,16 @@
 <div class="container-fluid">
   <h1>This is 3rd App</h1>
   <h2>Angular Forms</h2>
-  <!--Two Types of Forms
+<div class="row">
+  <div class="col-5">
+<app-tdfdemo></app-tdfdemo>
+<app-mdfdemo></app-mdfdemo>
+</div>
+<div class="col">
+  Some content goes here
+</div>
+
+<!--Two Types of Forms
     - Template Driven Form (Simple Requirement)
           -Easy to make and uses two way databinding to pass data from view to component and vice versa.
     - Model Driven Form (Widely Used)
@@ -55,8 +64,18 @@
     user.controls['first'].valid>> returns true or false
 
     user.controls['first'].pristine >> 
+
+    Angular Services
+
+    These are reusable classes which can be accessed by multiple componenets they can have business logics
+     so that they are reusable to multiple components
+     
+
+     In ANgular you have a command to create a service class
+
+     #ng g s service-name
+
+     The above command creates a class with @injectable()
+     
   -->
   
-</div>
-<app-tdfdemo></app-tdfdemo>
-<app-mdfdemo></app-mdfdemo>
