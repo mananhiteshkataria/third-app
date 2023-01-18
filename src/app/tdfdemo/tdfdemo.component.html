@@ -1,0 +1,31 @@
+<div class="container">
+    <h3>
+        Template Driven Form
+    </h3>
+        <form #user="ngForm" (ngSubmit)="handleSubmit(user.value)">
+            <div class="container-fluid">
+            <div class="container">
+                <label>
+                    Firstname
+                    <input type ="text" name="first" placeholder="firstname"
+                    [(ngModel)]="first">
+                </label>
+            </div>
+                <div class="container">
+                    <label>
+                        Lastname
+                        <input type="text" name="last" placeholder="lastname"
+                        [(ngModel)]="last">
+                        </label>
+                </div>
+                    <div class="container">
+                        <label>
+                            PhoneNo
+                            <input type="text" name="phone" placeholder="phoneno"
+                            [(ngModel)]="phone">
+                        </label>
+                    </div>
+                <input type="submit" class="btn btn-primary">
+            </div>
+        </form>
+</div>
