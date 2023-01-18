@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-//importing form module
+//importing form and reactive module
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-//importing reactive forms module
+//importing  form builder module
 
 import { AppComponent } from './app.component';
 import { TdfdemoComponent } from './tdfdemo/tdfdemo.component';
@@ -17,7 +17,7 @@ import { MdfdemoComponent } from './mdfdemo/mdfdemo.component';
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

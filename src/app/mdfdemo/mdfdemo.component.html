@@ -1,0 +1,28 @@
+<div class="container">
+    <h3>
+        Model/Reactive Driven Form
+    </h3>
+        <form [formGroup]="user" (ngSubmit)="handleSubmit()">
+            <div class="container-fluid">
+            <div class="container">
+                <label>
+                    First Name
+                    <input formControlName="first"  placeholder="firstname">
+                </label>
+            </div>
+                <div class="container">
+                    <label>
+                        Last Name
+                        <input formControlName="last"  placeholder="lastname">
+                        </label>
+                </div>
+                    <div class="container">
+                        <label>
+                            Phone No
+                            <input formControlName="phone"  placeholder="phoneno">
+                        </label>
+                    </div>
+                <input type="submit" class="btn btn-primary">
+            </div>
+        </form>
+</div>
