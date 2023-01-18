@@ -8,7 +8,7 @@
                 <label>
                     First Name
                     <input type="text"  name="name" class="form-control"
-                    required minlength="3" [(ngModel)]="first" #tf1="ngModel">
+                    required minlength="3" [(ngModel)]="first" #tf1="ngModel" placeholder="firstname">
                     
                 </label>
                 <span [hidden]="tf1.valid || tf1.pristine" class="text-danger"> Enter name and more than 3 charcters</span>

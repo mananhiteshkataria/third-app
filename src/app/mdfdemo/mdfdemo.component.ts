@@ -9,7 +9,7 @@ export class MdfdemoComponent {
  constructor(public builder:FormBuilder){}
 
   user=this.builder.group({
-    first:['',Validators.compose([Validators.required])],
+    first:['',Validators.compose([Validators.required,Validators.minLength(3)])],
   last:['',Validators.compose([Validators.required])],
   phone:['',Validators.compose([Validators.required])]
 });
