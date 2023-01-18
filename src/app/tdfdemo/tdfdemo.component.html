@@ -7,25 +7,29 @@
             <div class="form-group">
                 <label>
                     First Name
-                    <input type ="text" class="form-control" name="first" placeholder="firstname"
-                     [(ngModel)]="first" required>
+                    <input type="text"  name="name" class="form-control"
+                    required minlength="3" [(ngModel)]="first" #tf1="ngModel">
+                    
                 </label>
+                <span [hidden]="tf1.valid || tf1.pristine" class="text-danger"> Enter name and more than 3 charcters</span>
             </div>
                 <div class="form-group">
                     <label>
                         Last Name
                         <input type="text " class="form-control" name="last" placeholder="lastname"
-                        ngModel>
+                        ngModel #tf2="ngModel" required minlength="3">
                         </label>
+                        <span [hidden]="tf2.valid || tf2.pristine" class="text-danger"> Enter name and more than 3 charcters</span>
                 </div>
                     <div class="form-group">
                         <label>
                             Phone No
-                            <input type="text" class="form-control" name="phone" placeholder="phoneno"
-                            ngModel>
+                            <input type="text" class="form-control" name="phone" placeholder="phoneno" required
+                            ngModel #tf3="ngModel" required minlength="10">
                         </label>
+                        <span [hidden]="tf3.valid || tf3.pristine" class="text-danger"> Enter no and more than 10 charcters</span>
                     </div>
-                <input type="submit" class="btn btn-primary">
+                <input type="submit" class="btn btn-primary" [disabled]="user.invalid">
             </div>
         </form>
 </div>
