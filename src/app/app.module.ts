@@ -2,8 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 //importing form and reactive module
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-//importing  form builder module
-
+import {HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { TdfdemoComponent } from './tdfdemo/tdfdemo.component';
 import { MdfdemoComponent } from './mdfdemo/mdfdemo.component';
@@ -18,6 +17,7 @@ import { MdfdemoComponent } from './mdfdemo/mdfdemo.component';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
