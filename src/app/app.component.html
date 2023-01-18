@@ -27,6 +27,22 @@
       It uses an inbuilt object called FormBuilder to handle the form data,
       this FormBuilder object is auromatically created by Angular when
       you use ReactiveFormsModule in the AppModule
+
+      Drawbacks of Template Driven Form over Model Driven Form
+      - Template Driven Form is not a good fit for Model Driven Form because you will have less control
+      because form controls are created in HTML whereas in MDF form controls are created in TS i.e. , FormBuilder.group({})
+      - TDF uses [(ngModel)], ngForm to handle Form Data but in MDF we can handle Form Data without using [(ngModel)]
+      and ngForm. because of same form builder.group({}) which itself take care of two way data binding
+      - auto populating forms or clearing forms at runtime need more code in tdf but in MDF its very simple,
+      
+
+
+      this.user.controls['first'].setValue('Guest'):// sets first name as guest in both view and component
+
+      thos.user.reset({}); // clears form in view and component class
+
+    Form Validation is done in the code in the case of MDF and in case of TDF its done in view
+}
   -->
   
 </div>
